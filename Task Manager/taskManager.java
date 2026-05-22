@@ -10,6 +10,7 @@ Node(String data)
 }
 public class taskManager{
     static Node top = null;
+    static String  stack ;
     //push()
     static void push(String data)
     {
@@ -19,6 +20,21 @@ public class taskManager{
 
 
     }
+    //pop()
+    static String pop()
+    {
+        if(top == null)
+        {
+            System.out.println("Nothing to remove!");
+            return null;
+        } 
+        else
+        {
+            String data = top.data;
+            top = top.next;
+            return data;
+        }
+    } 
 
     public static void main(String[] args) {
         
