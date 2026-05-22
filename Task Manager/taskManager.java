@@ -35,6 +35,24 @@ public class taskManager{
             return data;
         }
     } 
+    //display()
+    static void display()
+    {
+        if(top == null)
+        {
+            System.out.println("No task available!");
+            return;
+        } 
+        else
+        {
+            Node temp = top;
+            while(temp!=null)
+            {
+                System.out.println(temp.data);
+                temp = temp.next;
+            }
+        }
+    }
 
     public static void main(String[] args) {
         
