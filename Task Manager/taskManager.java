@@ -66,7 +66,32 @@ public class taskManager{
             System.out.println("2.Undo task");
             System.out.println("3.Display task");
             System.out.println("4.Exit Task");
-        }
+            System.out.print("Enter your choice : ");
+            choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice) {
+                case 1:
+                System.out.print("Enter your task: ");
+                String task = sc.nextLine();
+                push(task);
+                break;
+                case 2: 
+                String value = pop();
+                System.out.println("The task " + value + " is removed successfully!"); 
+                break;
+                case 3:
+                display();
+                break;
+                case 4:
+                System.out.println("Exiting the Menu!");
+                break;
+                default:
+                System.out.println("Invalid choice! ");
+                break;
+            }
+        }while (choice != 4); 
+            
+        
 
         
     }
