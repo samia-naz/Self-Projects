@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Node {
 String data ;
 Node next;
@@ -9,6 +11,7 @@ Node(String data)
     
 }
 public class taskManager{
+    static Scanner sc = new Scanner(System.in);
     static Node top = null;
     static String  stack ;
     //push()
@@ -55,6 +58,16 @@ public class taskManager{
     }
 
     public static void main(String[] args) {
+        int choice = 0;
+        do 
+        {
+            System.out.println("**** TASK MANAGER ****");
+            System.out.println("1.Add task");
+            System.out.println("2.Undo task");
+            System.out.println("3.Display task");
+            System.out.println("4.Exit Task");
+        }
+
         
     }
 }
